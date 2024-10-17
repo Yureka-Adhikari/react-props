@@ -11,9 +11,11 @@ class Customer extends React.Component {
 }
 class Details extends React.Component {
   render() {
+    const cityname = "Pokhara";
     return (
       <div>
-        <h2> Hello! </h2> <Customer city="Kathmandu" />{" "}
+        <h2> Hello! </h2> <Customer city="Kathmandu" />
+        <Customer city={cityname} />
       </div>
     );
   }
