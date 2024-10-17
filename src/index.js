@@ -6,16 +6,27 @@ import reportWebVitals from "./reportWebVitals";
 
 class Customer extends React.Component {
   render() {
-    return <h2> I am from {this.props.city} </h2>;
+    return (
+      <h2>
+        I am from {this.props.customerDetails.city},
+        {this.props.customerDetails.country}
+      </h2>
+    );
   }
 }
 class Details extends React.Component {
   render() {
-    const cityname = "Pokhara";
+    // const cityname = "Pokhara";
+
+    const customerinfo = {
+      city: "Kathmandu",
+      country: "Nepal",
+    };
     return (
       <div>
-        <h2> Hello! </h2> <Customer city="Kathmandu" />
-        <Customer city={cityname} />
+        {/* <h2> Hello! </h2> <Customer city="Kathmandu" />
+        <Customer city={cityname} /> */}
+        <h2> Hello! </h2> <Customer customerDetails={customerinfo} />
       </div>
     );
   }
